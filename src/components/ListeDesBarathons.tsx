@@ -25,6 +25,7 @@ const ListeDesBarathons = ({ barathons, pubs }: IListeDesBarathons): JSX.Element
             <Sh1>Liste des Barathons</Sh1>
             <Sp><i>(Il est possible que le parcours soit pour le moment vide, il sera rempli très prochainement)</i></Sp>
             <div style={{ display: "flex" }}>
+                
                 <SecondeMap>
                     {barathons.map((barathon) => {
                         return <BarathonSeul key={barathon._id} setSelectedBarathon={selectBarathon} barathon={barathon} />;

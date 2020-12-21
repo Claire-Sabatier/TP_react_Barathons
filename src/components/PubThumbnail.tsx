@@ -2,7 +2,6 @@ import React from 'react';
 import chroma from 'chroma-js';
 import styled from 'styled-components';
 import { colors } from '../styles/colors';
-import { fonts } from '../styles/fonts';
 import { IPub } from '../types/api';
 import Button from './Button';
 
@@ -19,24 +18,25 @@ const PubThumbnail = ({ pub, addPub, removePub }: IProps): JSX.Element => {
             <SContent>
                 <SDescription>{name}</SDescription>
             </SContent>
-            {(addPub) &&
+
+            
             <Button
                 type='button'
                 onClick={(): void => {
-                    addPub && addPub(_id);
+                    addPub(_id);
                 }}
             >
                 +
             </Button>
-            }
-            {(removePub) && <Button
+            
+           <Button
                 type='button'
                 onClick={(): void => {
-                    removePub && removePub(_id);
+                    removePub(_id);
                 }}
             >  Retirer
             </Button>
-            }
+            
         </SThumbnail>
     );
 };

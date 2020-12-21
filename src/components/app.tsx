@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { colors } from '../styles/colors';
 import { IBarathon, IPub } from '../types/api';
 import BarathonForm from './BarathonForm';
 import ListeDesBarathons from './ListeDesBarathons';

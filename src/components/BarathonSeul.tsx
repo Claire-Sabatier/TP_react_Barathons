@@ -14,14 +14,20 @@ const BarathonSeul = ({ barathon, setSelectedBarathon }: IBarathonSeul): JSX.Ele
         <>
             <p>
                 <Snom>{barathon.name} de <Sb>{barathon.author} </Sb> </Snom>
-                <Button
-                    type="button"
-                    onClick={() :void => {
-                        setSelectedBarathon && setSelectedBarathon(barathon);
-                    }}
-                >
-                    Voir le parcours
-                </Button>
+                
+                {/* If le barathon n'a pas de checkpoint on n'affiche pas le bouton */
+                (barathon.checkpoints.length > 0 )
+                    &&
+                    <Button
+                        type="button"
+                        onClick={() :void => {
+                            setSelectedBarathon && setSelectedBarathon(barathon);
+                        }}
+                    >
+                        Voir le parcours
+                    </Button>
+                }
+                
             </p>
         </>
     );
