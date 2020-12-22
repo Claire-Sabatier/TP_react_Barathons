@@ -25,22 +25,22 @@ const ListeDesBarathons = ({ barathons, pubs }: IListeDesBarathons): JSX.Element
             <Sh1>Liste des Barathons</Sh1>
             <Sp><i>(Il est possible que le parcours soit pour le moment vide, il sera rempli très prochainement)</i></Sp>
             <div style={{ display: "flex" }}>
-                
+                <SecondeMap>
+                    <Map pubs={selectedPubs} selectedPubs={selectedPubs}/>
+                </SecondeMap>
                 <SecondeMap>
                     {barathons.map((barathon) => {
                         return <BarathonSeul key={barathon._id} setSelectedBarathon={selectBarathon} barathon={barathon} />;
                     })}
                 </SecondeMap>
-                <SecondeMap>
-                    <Map pubs={selectedPubs} selectedPubs={selectedPubs}/>
-                </SecondeMap>
+                
             </div>
         </>
     );
 };
 
 const Sh1 = styled.h1`
-    color: ${colors.white}; 
+    color: ${colors.vibrant}; 
     text-align: center;
 `;
 

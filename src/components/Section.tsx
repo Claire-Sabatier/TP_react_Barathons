@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import chroma from 'chroma-js';
 import { colors } from '../styles/colors';
 
 interface IProps {
@@ -15,10 +16,11 @@ const Section = ({ children }: IProps): JSX.Element => {
 };
 
 const SSection = styled.div`
-    border-radius: 4px;
+    border-radius: 33px;
     max-width: 1100px;
-    padding: 15px;
-    background-color: ${colors.vert_fonce};
+    padding: 30px;
+    background: ${chroma(colors.vert_fonce).alpha(0.2).css()};
+    border: 3px solid ${colors.vibrant};
     margin: 30px auto;
 `;
 

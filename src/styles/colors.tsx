@@ -9,5 +9,6 @@ export const colors = {
     white: '#eeeeee',
     vert_clair: '#9DB8B1',
     vert_fonce: '#4C6665',
+    violine : '#EAD6EE',
     brun: '#A26D5D'
 };

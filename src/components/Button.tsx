@@ -21,10 +21,10 @@ const SButton = styled.button`
     padding: 0 15px;
     border-radius: 4px;
     border: none;
-    background-color: ${colors.rose};
+    background-color: ${colors.vibrant};
     color: ${colors.vert_fonce};
     cursor: pointer;
-    filter: drop-shadow(0 2px 4px ${chroma(colors.darkGrey).alpha(0.5).css()});
+    filter: drop-shadow(0 1px 2px ${chroma(colors.vert_fonce).alpha(0.5).css()});
 `;
 
 export default Button;

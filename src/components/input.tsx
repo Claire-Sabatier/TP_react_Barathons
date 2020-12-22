@@ -29,7 +29,7 @@ const SInputContainer = styled.div`
 `;
 
 const SLabel = styled.label`
-    background: ${colors.vieux_rose};
+    background: ${colors.vibrant};
     color: ${colors.white};
     font-weight: bold;
     line-height: ${INPUT_HEIGHT}px;

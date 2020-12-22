@@ -6,8 +6,8 @@ import { IPub } from '../types/api';
 import PubThumbnail from './PubThumbnail';
 import { colors } from '../styles/colors';
 
-const TILE_LAYER = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
-const ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
+const TILE_LAYER = 'https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png';
+const ATTRIBUTION = '<a href="https://github.com/cyclosm/cyclosm-cartocss-style/releases" title="CyclOSM - Open Bicycle render">CyclOSM</a> | Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
 interface IProps {
     pubs: IPub[];
@@ -54,7 +54,7 @@ const LeafletMap = ({ pubs, addPub, removePub, selectedPubs }: IProps): JSX.Elem
 };
 
 const SMapContainer = styled.div`
-    margin: 15px;
+    margin: 20px;
 `;
 
 export default LeafletMap;
